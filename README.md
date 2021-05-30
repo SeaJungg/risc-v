@@ -29,7 +29,6 @@ Throughout project, try to commit your changes by git commit -m "change message"
 
 ```console
 $git clone https://github.com/leeymcj/comuter-system.git
-$cd computer-system
 ```
 
 list project files by listing
