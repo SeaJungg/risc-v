@@ -1,3 +1,4 @@
+.import ../matmul.s
 .import ../utils.s
 .import ../dot.s
 
