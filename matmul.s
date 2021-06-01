@@ -19,7 +19,7 @@
 matmul:
 
     # Error if mismatched dimensions
-    bne a2, a4, mismatched_dimensions
+    bne a2, a4, mismatched_dimensions #a2와 a4가 같지 않으면 mismatched_dimensions 으로 이동
 
     # Prologue
     addi sp, sp, -40
@@ -45,11 +45,11 @@ matmul:
     add s7, x0, x0
 
 outer_loop_start:
-    beq s7, s1, outer_loop_end
+    beq s7, s1, outer_loop_end # s7과 s1이 같으면 outer_loop_end로 이동
     add s8, x0, x0
 
 inner_loop_start:
-    beq s8, a5, inner_loop_end
+    beq s8, a5, inner_loop_end # s8과 a5가 같으면 inner_loop_end로 이동
     addi t0, x0, 4
     mul t0, t0, s2
     mul t0, t0, s7
@@ -62,7 +62,7 @@ inner_loop_start:
     mv a2, s2
     addi a3, x0, 1
     mv a4, s5
-    jal ra, dot
+    jal ra, dot #return address를 ra에 저장
     addi t0, x0, 4
     mul t0, t0, s5
     mul t0, t0, s7
