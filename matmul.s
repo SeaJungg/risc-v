@@ -19,7 +19,7 @@
 matmul:
 
     # Error if mismatched dimensions
-
+    bne a2, a4, mismatched_dimensions
 
     # Prologue
     addi sp, sp, -40
